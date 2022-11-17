@@ -11,16 +11,16 @@ import org.springframework.context.annotation.PropertySource;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
-
-//이 클래스를 설정파일로 읽어드리는 어노테이션
+gsdfgerqwt235234erdfg
+//�씠 �겢�옒�뒪瑜� �꽕�젙�뙆�씪濡� �씫�뼱�뱶由щ뒗 �뼱�끂�뀒�씠�뀡
 @Configuration
-//설정내용을 어느 파일에서 읽어올 것인지 결정
+//�꽕�젙�궡�슜�쓣 �뼱�뒓 �뙆�씪�뿉�꽌 �씫�뼱�삱 寃껋씤吏� 寃곗젙
 //classpath: src/main/resource
 @PropertySource("classpath:/application.properties")
 public class DataConfiguration {
-	//Bean객체로 생성해주는 어노테이션
+	//Bean媛앹껜濡� �깮�꽦�빐二쇰뒗 �뼱�끂�뀒�씠�뀡
 	@Bean
-	//applictaion.properties 파일에서 spring.datasource.hikari로 시작하는 설정들만 읽어오는 설정
+	//applictaion.properties �뙆�씪�뿉�꽌 spring.datasource.hikari濡� �떆�옉�븯�뒗 �꽕�젙�뱾留� �씫�뼱�삤�뒗 �꽕�젙
 	@ConfigurationProperties(prefix="spring.datasource.hikari")
 	public HikariConfig hikariConfig() {
 		return new HikariConfig();
