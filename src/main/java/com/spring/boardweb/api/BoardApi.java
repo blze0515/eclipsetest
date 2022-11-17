@@ -14,6 +14,7 @@ import com.spring.boardweb.service.board.BoardService;
 public class BoardApi {
 	@Autowired
 	BoardService boardService;
+	public
 	
 	@GetMapping("/api/pageboardlist")
 	public Page<Board> pageBoardList(@PageableDefault(page = 0, size = 10) Pageable pageable,
